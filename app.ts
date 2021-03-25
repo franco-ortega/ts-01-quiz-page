@@ -1,11 +1,9 @@
-import { confirmQuiz, countsAsYes, question, completeQuiz } from './utils.js';
+import { confirmQuiz, countsAsYes, question, completeQuiz, quizResults } from './utils.js';
 
 const startButton = document.querySelector('button') as HTMLButtonElement;
 const results = document.getElementById('results') as HTMLElement;
 
 let quizScore = 0;
-console.log(quizScore);
-
 
 startButton.addEventListener<'click'>('click', () => {
     if(!confirmQuiz()) {
@@ -13,9 +11,9 @@ startButton.addEventListener<'click'>('click', () => {
     } else {
         const userName: string = prompt('What is your name?');
 
-        const questionOne = `Hey ${userName}! Does Lavinia get married?`;
-        const questionTwo = `How about this one, ${userName}. Is the new found city called Lantuma?`;
-        const questionThree = `One more to go, ${userName}! Does Lavinia turn into a cat?`;
+        const questionOne: string = `Hey ${userName}! Does Lavinia get married?`;
+        const questionTwo: string = `How about this one, ${userName}. Is the new found city called Lantuma?`;
+        const questionThree: string = `One more to go, ${userName}! Does Lavinia turn into a cat?`;
 
         const answerOne: string = question(userName, questionOne);
         let yes: boolean = countsAsYes(answerOne);
@@ -27,7 +25,7 @@ startButton.addEventListener<'click'>('click', () => {
         const answerTwo: string = question(userName, questionTwo);
         yes = countsAsYes(answerTwo);
 
-        if(yes) {
+        if(!yes) {
             quizScore++;
         };
 
@@ -40,15 +38,10 @@ startButton.addEventListener<'click'>('click', () => {
 
         completeQuiz(userName);
 
-
-        results.textContent = `Your score is ${String(quizScore)} out of 3 for ${String(quizScore / 3 * 100)}%.`;
+        results.textContent = quizResults(userName, quizScore);
 
 console.log(quizScore);
 
         quizScore = 0;
-
-
     };
-
-
 });

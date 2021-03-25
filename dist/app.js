@@ -1,8 +1,7 @@
-import { confirmQuiz, countsAsYes, question, completeQuiz } from './utils.js';
+import { confirmQuiz, countsAsYes, question, completeQuiz, quizResults } from './utils.js';
 var startButton = document.querySelector('button');
 var results = document.getElementById('results');
 var quizScore = 0;
-console.log(quizScore);
 startButton.addEventListener('click', function () {
     if (!confirmQuiz()) {
         alert('Try again anytime!');
@@ -20,7 +19,7 @@ startButton.addEventListener('click', function () {
         ;
         var answerTwo = question(userName, questionTwo);
         yes = countsAsYes(answerTwo);
-        if (yes) {
+        if (!yes) {
             quizScore++;
         }
         ;
@@ -31,7 +30,7 @@ startButton.addEventListener('click', function () {
         }
         ;
         completeQuiz(userName);
-        results.textContent = "Your score is " + String(quizScore) + " out of 3 for " + String(quizScore / 3 * 100) + "%.";
+        results.textContent = quizResults(userName, quizScore);
         console.log(quizScore);
         quizScore = 0;
     }
