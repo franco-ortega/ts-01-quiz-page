@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+header, main, section, p, footer, ul, li {
+    margin: 1vw;
+    padding: 1vw;
+}
+
+header {
+    background: lightblue;
+}
+
+main {
+    background: lightcoral;
+}
+
+section {
+    background: lightgrey;
+}
+
+footer {
+    background: lightyellow;
+}
+
+ul {
+    background: magenta;
+}
+
+li {
+    background: mediumaquamarine;
+}
