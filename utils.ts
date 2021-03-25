@@ -14,8 +14,13 @@ const question = (userName: string, question: string): string => {
     return prompt(`Hey ${userName}! Does Lavinia get married?`);
 };
 
+const completeQuiz = (userName: string): void => {
+    return alert(`Congratulations, ${userName}, you have completed the quiz.`)
+};
+
 export {
     confirmQuiz,
     question,
-    countsAsYes
+    countsAsYes,
+    completeQuiz
 };

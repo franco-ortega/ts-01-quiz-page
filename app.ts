@@ -1,4 +1,4 @@
-import { confirmQuiz, countsAsYes, question } from './utils.js';
+import { confirmQuiz, countsAsYes, question, completeQuiz } from './utils.js';
 
 const startButton = document.querySelector('button') as HTMLButtonElement;
 const results = document.getElementById('results') as HTMLElement;
@@ -37,6 +37,9 @@ startButton.addEventListener<'click'>('click', () => {
         if(!scoreThree) {
             quizScore++;
         };
+
+        completeQuiz(userName);
+
 
         results.textContent = `Your score is ${String(quizScore)} out of 3 for ${String(quizScore / 3 * 100)}%.`;
 
