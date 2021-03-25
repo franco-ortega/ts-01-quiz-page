@@ -6,11 +6,11 @@ console.log(results);
 console.log(confirmQuiz);
 startButton.addEventListener('click', function () {
     console.log('Button was clicked!');
-    if (confirmQuiz()) {
-        prompt('What is your name?');
+    if (!confirmQuiz()) {
+        alert('Try again anytime!');
     }
     else {
-        alert('Try again anytime!');
+        var userName = prompt('What is your name?');
     }
     ;
 });
