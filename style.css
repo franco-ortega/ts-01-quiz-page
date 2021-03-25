@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+     /* CSS HSL */
+     --tea-green: hsla(74, 70%, 82%, 1);
+     --flax: hsla(53, 62%, 71%, 1);
+     --gold-fusion: rgb(110, 94, 65);
+     background-color: var(--tea-green);
+     color: var(--gold-fusion);
+}
+
+body, header, aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, aside, span, main, section, p, button, footer, ul, ol, li {
+    margin: 1vw;
+    padding: 1vw;
+}
+
+header {
+    background: lightblue;
+}
+
+main {
+    background: lightcoral;
+}
+
+section {
+    background: lightgrey;
+}
+
+img {
+    float: right;
+    margin: 2vw;
+    width: 45%;
+}
+
+footer {
+    background: lightyellow;
+}
+
+ul {
+    background: magenta;
+}
+
+li {
+    background: mediumaquamarine;
+}
+
+#spoiler-alert-box {
+    border: solid 2px var(--flax);
+    width: 90vw;
+}
+
+#spoiler-alert {
+    animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+
+@media (min-width: 500px) {
+    img {
+        margin: 1vw;
+        width: 25%;
+    }
+    
+
+}
