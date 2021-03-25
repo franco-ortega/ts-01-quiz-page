@@ -13,25 +13,18 @@ startButton.addEventListener('click', function () {
         var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
         var answerOne = question(userName, questionOne);
         var yes = countsAsYes(answerOne);
-        if (yes) {
+        if (yes)
             quizScore++;
-        }
-        ;
         var answerTwo = question(userName, questionTwo);
         yes = countsAsYes(answerTwo);
-        if (!yes) {
+        if (!yes)
             quizScore++;
-        }
-        ;
         var answerThree = question(userName, questionThree);
         yes = countsAsYes(answerThree);
-        if (!yes) {
+        if (!yes)
             quizScore++;
-        }
-        ;
         completeQuiz(userName);
         results.textContent = quizResults(userName, quizScore);
-        console.log(quizScore);
         quizScore = 0;
     }
     ;
