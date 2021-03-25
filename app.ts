@@ -29,16 +29,21 @@ startButton.addEventListener<'click'>('click', () => {
 
         if(scoreTwo) {
             quizScore++;
-        }
+        };
 
         const answerThree: string = question(userName, questionThree);
         const scoreThree: boolean = countsAsYes(answerThree);
 
         if(!scoreThree) {
             quizScore++;
-        }
+        };
+
+        results.textContent = `Your score is ${String(quizScore)} out of 3 for ${String(quizScore / 3 * 100)}%.`;
 
 console.log(quizScore);
+
+        quizScore = 0;
+
 
     };
 

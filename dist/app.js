@@ -23,12 +23,16 @@ startButton.addEventListener('click', function () {
         if (scoreTwo) {
             quizScore++;
         }
+        ;
         var answerThree = question(userName, questionThree);
         var scoreThree = countsAsYes(answerThree);
         if (!scoreThree) {
             quizScore++;
         }
+        ;
+        results.textContent = "Your score is " + String(quizScore) + " out of 3 for " + String(quizScore / 3 * 100) + "%.";
         console.log(quizScore);
+        quizScore = 0;
     }
     ;
 });
