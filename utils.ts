@@ -1,5 +1,5 @@
-const confirmQuiz = (): void => {
-    confirm('Do you want to proceed?')
+const confirmQuiz = (): boolean => {
+    return confirm('Do you want to proceed?')
 };
 
 export {
