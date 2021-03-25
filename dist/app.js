@@ -13,20 +13,20 @@ startButton.addEventListener('click', function () {
         var questionTwo = "How about this one, " + userName + ". Is the new found city called Lantuma?";
         var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
         var answerOne = question(userName, questionOne);
-        var scoreOne = countsAsYes(answerOne);
-        if (scoreOne) {
+        var yes = countsAsYes(answerOne);
+        if (yes) {
             quizScore++;
         }
         ;
         var answerTwo = question(userName, questionTwo);
-        var scoreTwo = countsAsYes(answerTwo);
-        if (scoreTwo) {
+        yes = countsAsYes(answerTwo);
+        if (yes) {
             quizScore++;
         }
         ;
         var answerThree = question(userName, questionThree);
-        var scoreThree = countsAsYes(answerThree);
-        if (!scoreThree) {
+        yes = countsAsYes(answerThree);
+        if (!yes) {
             quizScore++;
         }
         ;

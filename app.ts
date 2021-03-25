@@ -18,23 +18,23 @@ startButton.addEventListener<'click'>('click', () => {
         const questionThree = `One more to go, ${userName}! Does Lavinia turn into a cat?`;
 
         const answerOne: string = question(userName, questionOne);
-        const scoreOne: boolean = countsAsYes(answerOne);
+        let yes: boolean = countsAsYes(answerOne);
 
-        if(scoreOne) {
+        if(yes) {
             quizScore++;
         };
 
         const answerTwo: string = question(userName, questionTwo);
-        const scoreTwo: boolean = countsAsYes(answerTwo);
+        yes = countsAsYes(answerTwo);
 
-        if(scoreTwo) {
+        if(yes) {
             quizScore++;
         };
 
         const answerThree: string = question(userName, questionThree);
-        const scoreThree: boolean = countsAsYes(answerThree);
+        yes = countsAsYes(answerThree);
 
-        if(!scoreThree) {
+        if(!yes) {
             quizScore++;
         };
 
