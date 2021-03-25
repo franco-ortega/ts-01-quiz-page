@@ -7,10 +7,7 @@ let quizScore = 0;
 console.log(quizScore);
 
 
-
 startButton.addEventListener<'click'>('click', () => {
-console.log('Button was clicked!')
-
     if(!confirmQuiz()) {
         alert('Try again anytime!');
     } else {
@@ -23,35 +20,19 @@ console.log('Button was clicked!')
         const answerOne: string = question(userName, questionOne);
         const scoreOne: boolean = countsAsYes(answerOne);
 
-console.log(userName);
-console.log(answerOne);
-console.log(scoreOne);
-
         if(scoreOne) {
             quizScore++;
         };
 
-console.log(quizScore);
-
         const answerTwo: string = question(userName, questionTwo);
         const scoreTwo: boolean = countsAsYes(answerTwo);
-
-console.log(answerTwo);
-console.log(scoreTwo);
-        
 
         if(scoreTwo) {
             quizScore++;
         }
 
-console.log(quizScore);
-
         const answerThree: string = question(userName, questionThree);
         const scoreThree: boolean = countsAsYes(answerThree);
-
-console.log(answerThree);
-console.log(scoreThree);
-        
 
         if(!scoreThree) {
             quizScore++;
