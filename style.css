@@ -36,6 +36,12 @@ section {
     background: lightgrey;
 }
 
+img {
+    float: right;
+    margin: 2vw;
+    width: 45%;
+}
+
 footer {
     background: lightyellow;
 }
@@ -63,3 +69,12 @@ li {
     100%{opacity: 1;}
 }
 
+
+@media (min-width: 500px) {
+    img {
+        margin: 1vw;
+        width: 25%;
+    }
+    
+
+}
