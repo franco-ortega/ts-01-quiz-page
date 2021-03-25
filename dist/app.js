@@ -1,9 +1,8 @@
-import { confirmQuiz } from './utils.js';
+import { confirmQuiz, countsAsYes, questionOne } from './utils.js';
 var startButton = document.querySelector('button');
 var results = document.getElementById('results');
-console.log(startButton);
-console.log(results);
-console.log(confirmQuiz);
+var quizScore = 0;
+console.log(quizScore);
 startButton.addEventListener('click', function () {
     console.log('Button was clicked!');
     if (!confirmQuiz()) {
@@ -11,6 +10,16 @@ startButton.addEventListener('click', function () {
     }
     else {
         var userName = prompt('What is your name?');
+        var answerOne = questionOne(userName);
+        var scoreOne = countsAsYes(answerOne);
+        console.log(userName);
+        console.log(answerOne);
+        console.log(scoreOne);
+        if (scoreOne) {
+            quizScore++;
+        }
+        ;
+        console.log(quizScore);
     }
     ;
 });
