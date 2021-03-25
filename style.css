@@ -19,7 +19,7 @@ body, header, aside {
     align-items: center;
 }
 
-header, aside, span, main, section, p, footer, ul, li {
+header, aside, span, main, section, p, button, footer, ul, ol, li {
     margin: 1vw;
     padding: 1vw;
 }
