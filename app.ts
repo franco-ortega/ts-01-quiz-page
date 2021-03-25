@@ -1,10 +1,12 @@
-import { confirmQuiz, countsAsYes, questionOne } from './utils.js';
+import { confirmQuiz, countsAsYes, question } from './utils.js';
 
 const startButton = document.querySelector('button') as HTMLButtonElement;
 const results = document.getElementById('results') as HTMLElement;
 
 let quizScore = 0;
 console.log(quizScore);
+
+
 
 startButton.addEventListener<'click'>('click', () => {
 console.log('Button was clicked!')
@@ -13,7 +15,10 @@ console.log('Button was clicked!')
         alert('Try again anytime!');
     } else {
         const userName: string = prompt('What is your name?');
-        const answerOne: string = questionOne(userName);
+
+        const questionOne = `Hey ${userName}! Does Lavinia get married?`;
+        
+        const answerOne: string = question(userName, questionOne);
         const scoreOne: boolean = countsAsYes(answerOne);
 
 console.log(userName);

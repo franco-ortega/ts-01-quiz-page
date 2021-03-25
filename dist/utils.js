@@ -10,7 +10,7 @@ var countsAsYes = function (reply) {
     }
     ;
 };
-var questionOne = function (userName) {
+var question = function (userName, question) {
     return prompt("Hey " + userName + "! Does Lavinia get married?");
 };
-export { confirmQuiz, questionOne, countsAsYes };
+export { confirmQuiz, question, countsAsYes };

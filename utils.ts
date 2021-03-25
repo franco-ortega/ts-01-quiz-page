@@ -10,12 +10,12 @@ const countsAsYes = (reply: string): boolean => {
     };
 };
 
-const questionOne = (userName: string): string => {
+const question = (userName: string, question: string): string => {
     return prompt(`Hey ${userName}! Does Lavinia get married?`);
 };
 
 export {
     confirmQuiz,
-    questionOne,
+    question,
     countsAsYes
 };
