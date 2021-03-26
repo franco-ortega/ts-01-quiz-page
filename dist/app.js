@@ -8,18 +8,18 @@ startButton.addEventListener('click', function () {
     }
     else {
         var userName = prompt('What is your name?');
-        var questionOne = "Hey " + userName + "! Does Lavinia get married?";
+        var questionOne = "Hey " + userName + "! Does Lavinia get hitched?";
         var questionTwo = "How about this one, " + userName + ". Is the new found city called Lantuma?";
         var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
-        var answerOne = question(userName, questionOne);
+        var answerOne = question(questionOne);
         var yes = countsAsYes(answerOne);
         if (yes)
             quizScore++;
-        var answerTwo = question(userName, questionTwo);
+        var answerTwo = question(questionTwo);
         yes = countsAsYes(answerTwo);
         if (!yes)
             quizScore++;
-        var answerThree = question(userName, questionThree);
+        var answerThree = question(questionThree);
         yes = countsAsYes(answerThree);
         if (!yes)
             quizScore++;
