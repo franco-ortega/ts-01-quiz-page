@@ -1,10 +1,31 @@
-import { confirmQuiz } from './utils.js';
+import { confirmQuiz, countsAsYes, question, completeQuiz, quizResults } from './utils.js';
 var startButton = document.querySelector('button');
 var results = document.getElementById('results');
-console.log(startButton);
-console.log(results);
-console.log(confirmQuiz);
+var quizScore = 0;
 startButton.addEventListener('click', function () {
-    console.log('Button was clicked!');
-    confirmQuiz();
+    if (!confirmQuiz()) {
+        alert('Try again anytime!');
+    }
+    else {
+        var userName = prompt('What is your name?');
+        var questionOne = "Hey " + userName + "! Does Lavinia get married?";
+        var questionTwo = "How about this one, " + userName + ". Is the new found city called Lantuma?";
+        var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
+        var answerOne = question(userName, questionOne);
+        var yes = countsAsYes(answerOne);
+        if (yes)
+            quizScore++;
+        var answerTwo = question(userName, questionTwo);
+        yes = countsAsYes(answerTwo);
+        if (!yes)
+            quizScore++;
+        var answerThree = question(userName, questionThree);
+        yes = countsAsYes(answerThree);
+        if (!yes)
+            quizScore++;
+        completeQuiz(userName);
+        results.textContent = quizResults(userName, quizScore);
+        quizScore = 0;
+    }
+    ;
 });
