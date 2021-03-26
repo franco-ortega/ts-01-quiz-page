@@ -3,9 +3,9 @@ import { confirmQuiz, countsAsYes, question, completeQuiz, quizResults } from '.
 const startButton = document.querySelector('button') as HTMLButtonElement;
 const results = document.getElementById('results') as HTMLElement;
 
-let quizScore: number = 0;
-
 startButton.addEventListener<'click'>('click', (): void => {
+    let quizScore: number = 0;
+    let yes: boolean;
 
     if(!confirmQuiz()) {
         alert('Try again anytime!');
@@ -17,7 +17,7 @@ startButton.addEventListener<'click'>('click', (): void => {
         const questionThree: string = `One more to go, ${userName}! Does Lavinia turn into a cat?`;
 
         const answerOne: string = question(questionOne);
-        let yes: boolean = countsAsYes(answerOne);
+        yes = countsAsYes(answerOne);
         if(yes) quizScore++;
 
         const answerTwo: string = question(questionTwo);
@@ -31,7 +31,5 @@ startButton.addEventListener<'click'>('click', (): void => {
         completeQuiz(userName);
 
         results.textContent = quizResults(userName, quizScore);
-
-        quizScore = 0;
     };
 });

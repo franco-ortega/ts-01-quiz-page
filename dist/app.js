@@ -1,8 +1,9 @@
 import { confirmQuiz, countsAsYes, question, completeQuiz, quizResults } from './utils.js';
 var startButton = document.querySelector('button');
 var results = document.getElementById('results');
-var quizScore = 0;
 startButton.addEventListener('click', function () {
+    var quizScore = 0;
+    var yes;
     if (!confirmQuiz()) {
         alert('Try again anytime!');
     }
@@ -12,7 +13,7 @@ startButton.addEventListener('click', function () {
         var questionTwo = "How about this one, " + userName + ". Is the new found city called Lantuma?";
         var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
         var answerOne = question(questionOne);
-        var yes = countsAsYes(answerOne);
+        yes = countsAsYes(answerOne);
         if (yes)
             quizScore++;
         var answerTwo = question(questionTwo);
@@ -25,7 +26,6 @@ startButton.addEventListener('click', function () {
             quizScore++;
         completeQuiz(userName);
         results.textContent = quizResults(userName, quizScore);
-        quizScore = 0;
     }
     ;
 });
