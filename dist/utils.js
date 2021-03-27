@@ -10,8 +10,8 @@ var countsAsYes = function (reply) {
     }
     ;
 };
-var question = function (userName, question) {
-    return prompt("Hey " + userName + "! Does Lavinia get married?");
+var question = function (question) {
+    return prompt(question);
 };
 var completeQuiz = function (userName) {
     return alert("Congratulations, " + userName + ", you have completed the quiz.");

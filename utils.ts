@@ -10,8 +10,8 @@ const countsAsYes = (reply: string): boolean => {
     };
 };
 
-const question = (userName: string, question: string): string => {
-    return prompt(`Hey ${userName}! Does Lavinia get married?`);
+const question = (question: string): string => {
+    return prompt(question);
 };
 
 const completeQuiz = (userName: string): void => {
