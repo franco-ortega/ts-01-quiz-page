@@ -19,11 +19,11 @@ body, header, aside, main {
     align-items: center;
 }
 
-header, h2 {
+header {
     margin: 2vw;
 }
 
-aside, main, section, p, footer {
+main, section, p, footer {
     margin: 1vw;
     padding: 1vw;
 }
@@ -39,6 +39,8 @@ img {
 }
 
 button {
+    border-radius: 1vw;
+    outline: none;
     margin: 2vw;
     padding: 1.5vw;
     font-size: large;
@@ -58,13 +60,21 @@ li {
     margin: 1vw;
 }
 
+#welcome-p {
+    margin: 2vw;
+    font-size: 7vw;
+    font-weight: bold;
+}
+
 #spoiler-alert-box {
     border: solid 2px var(--flax);
     width: fit-content;
+    padding: 2vw;
 }
 
 #spoiler-alert {
     animation: blink 1s linear infinite alternate;
+    margin: 1vw;
 }
 
 @keyframes blink {
@@ -85,41 +95,81 @@ li {
 
 
 @media (min-width: 500px) {
-    img {
-        margin: 1vw;
-        width: 25%;
+
+    header {
+        margin-bottom: 0;
     }
 
     p {
         padding: 0;
     }
 
+    img {
+        margin: 1vw;
+        width: 25%;
+    }
     button {
-        margin: 2vw;
+        margin: 1.5vw;
         padding: 1vw;
     }
 
     ol {
         padding-top: 1vw;
-    }    
+    }
 
+    #welcome-p {
+        font-size: 5vw;
+    }
+
+
+    #spoiler-alert-box {
+        margin-bottom: 0;
+        padding: 1vw;
+    }
+    
     #results-section {
         padding: 0vw;
-        height: 5vh;
+        height: 2vh;
     }
 }
 
 @media (min-width: 1000px) {
+
+    header {
+        margin-top: 0;
+    }
+
     main {
         width: 80vw;
     }
 
     img {
-        margin: 1vw;
         width: 20%;
     }
 
     button {
+        margin: 1vw;
+        padding: .5vw;
+    }
+
+    #welcome-p {
+        margin-bottom: 1.5vw;
+        font-size: 4vw;
+    }
+
+    #spoiler-alert-box {
         padding: .75vw;
-    }    
+    }
+
+    #spoiler-alert {
+        margin: .5vw;
+    }
+
+    #story-section {
+        margin-top: 0;
+    }
+
+    #results-section {
+        height: 0vh;
+    }
 }
