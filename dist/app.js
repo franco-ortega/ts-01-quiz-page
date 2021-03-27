@@ -9,7 +9,7 @@ startButton.addEventListener('click', function () {
     }
     else {
         var userName = prompt('What is your name?');
-        var questionOne = "Hey " + userName + "! Does Lavinia get hitched?";
+        var questionOne = "Hey " + userName + "! Does Lavinia get married?";
         var questionTwo = "How about this one, " + userName + ". Is the new found city called Lantuma?";
         var questionThree = "One more to go, " + userName + "! Does Lavinia turn into a cat?";
         var answerOne = question(questionOne);
