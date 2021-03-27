@@ -12,7 +12,7 @@ startButton.addEventListener<'click'>('click', (): void => {
     } else {
         const userName: string = prompt('What is your name?');
         
-        const questionOne: string = `Hey ${userName}! Does Lavinia get hitched?`;
+        const questionOne: string = `Hey ${userName}! Does Lavinia get married?`;
         const questionTwo: string = `How about this one, ${userName}. Is the new found city called Lantuma?`;
         const questionThree: string = `One more to go, ${userName}! Does Lavinia turn into a cat?`;
 
