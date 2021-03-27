@@ -18,15 +18,19 @@ const completeQuiz = (userName: string): void => {
     return alert(`Congratulations, ${userName}, you have completed the quiz.`)
 };
 
+const calculatePercentage = (score: number): number => {
+    return Math.floor(score / 3 * 100);
+};
+
 const quizResults = (userName: string, score: number): string => {
     if(score === 3) {
-        return `Congratulations, ${userName}! You correctly answered all ${score} out of 3 for ${Math.floor(score / 3 * 100)}%!!`;
+        return `Congratulations, ${userName}! You correctly answered all ${score} out of 3 for ${calculatePercentage(score)}%!!`;
     } else if(score === 2) {
-        return `Good job, ${userName}! You correctly answered ${score} out of 3 for ${Math.floor(score / 3 * 100)}%.`;
+        return `Good job, ${userName}! You correctly answered ${score} out of 3 for ${calculatePercentage(score)}%.`;
     } else if(score === 1) {
-        return `Good try, ${userName}. You correctly answered ${score} out of 3 for ${Math.floor(score / 3 * 100)}%.`;
+        return `Good try, ${userName}. You correctly answered ${score} out of 3 for ${calculatePercentage(score)}%.`;
     } else {
-        return `You correctly answered ${score} out of 3 for ${Math.floor(score / 3 * 100)}%. Better luck next time, ${userName}.`;
+        return `You correctly answered ${score} out of 3 for ${calculatePercentage(score)}%. Better luck next time, ${userName}.`;
     };
 };
 
