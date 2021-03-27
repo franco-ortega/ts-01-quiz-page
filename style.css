@@ -28,10 +28,6 @@ main, section, p, footer {
     padding: 1vw;
 }
 
-main {
-    font-family: fantasy;
-}
-
 img {
     float: right;
     margin: 2vw;
