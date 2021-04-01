@@ -15,7 +15,7 @@ const question = (question: string): string => {
 };
 
 const completeQuiz = (userName: string): void => {
-    return alert(`Congratulations, ${userName}, you have completed the quiz.`)
+    alert(`Congratulations, ${userName}, you have completed the quiz.`);
 };
 
 const calculatePercentage = (score: number): number => {
